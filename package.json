@@ -1,0 +1,45 @@
+{
+  "name": "pc-new",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "mytest": "vue-cli-service build --mode mytest",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "axios": "^0.21.1",
+    "core-js": "^3.6.5",
+    "echarts": "^5.1.0",
+    "element-plus": "^1.1.0-beta.9",
+    "json2csv": "^5.0.6",
+    "moment": "^2.29.1",
+    "vue": "^3.0.0",
+    "vue-cookie-next": "^1.3.0",
+    "vue-loader-v16": "^16.0.0-beta.5.4",
+    "vue-router": "^4.0.0-0",
+    "vuex": "^4.0.0",
+    "xlsx": "^0.17.0"
+  },
+  "devDependencies": {
+    "@types/json2csv": "^5.0.3",
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-router": "~4.5.0",
+    "@vue/cli-plugin-typescript": "~4.4.0",
+    "@vue/cli-plugin-vuex": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "file-saver": "^2.0.5",
+    "js-cookie": "^3.0.0",
+    "js-md5": "^0.7.3",
+    "lodash": "^4.17.21",
+    "lodash-webpack-plugin": "^0.11.6",
+    "sass": "^1.32.8",
+    "sass-loader": "^7.3.1",
+    "script-loader": "^0.7.2",
+    "svg-sprite-loader": "^6.0.9",
+    "typescript": "^4.1.6"
+  }
+}

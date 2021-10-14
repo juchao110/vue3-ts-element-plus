@@ -1,0 +1,456 @@
+@import '../common.scss';
+
+.full-screen-single {
+  background-image: radial-gradient(#071664, #00092b);
+  height: 100vh;
+  overflow: hidden;
+  font-weight: bold;
+  width: 100%;
+
+  .header {
+    background: url("../../images/fullScreen/title.png") center no-repeat;
+    background-size: contain;
+    height: 75px;
+    line-height: 55px;
+    font-size: 22px;
+    color: $whiteColor;
+    text-align: center;
+  }
+
+  .body-content {
+    width: 100%;
+    height: calc(100vh - 125px);
+    @include padding_l(20px);
+    @include padding_r(20px);
+    color: $whiteColor;
+
+    .middle {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    .left {
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+    }
+
+    .right {
+      @extend .left;
+    }
+
+    .blue-title {
+      text-indent: 10px;
+      height: 25px;
+      line-height: 25px;
+      background: linear-gradient(to right, #fff, #007dff, #00e9ff, blue);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .each-item {
+      @include box_shadow(0px,0px,10px,#09e);
+
+      .weather-info {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        & > div {
+          background: linear-gradient(to bottom, #007dff, #09e);
+          @include border_radius(10px);
+          overflow: hidden;
+        }
+
+        p {
+          line-height: 30px;
+          text-align: center;
+        }
+      }
+    }
+
+    .time-content {
+      text-align: center;
+      font-size: 20px;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    .room-temperature {
+      background: #000f40;
+      @include padding_t(20px);
+      @include padding_b(20px);
+      @include border_radius(30px);
+      @include box_shadow(0px,0px,10px,#09e);
+
+      .room-list {
+        @include padding_t(20px);
+
+        .each-tag {
+          display: flex;
+          width: 20%;
+          @include margin_r(5%);
+          @include margin_b(20px);
+          @include padding_b(20px);
+          @include padding_t(10px);
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          height: auto;
+          text-align: center;
+          font-size: 16px;
+          font-weight: bold;
+          color: $whiteColor;
+          border: none;
+          @include border_radius(20px);
+          cursor: pointer;
+          background: linear-gradient(to bottom,#005f9c,#0089c7, #005d9a);
+
+          &:nth-child(4n) {
+            @include margin_r(0);
+          }
+
+          &:nth-child(4n+1) {
+            @include margin_l(2%);
+          }
+
+          .room-name-span {
+            line-height: 25px;
+            height: 50px;
+            font-size: 16px;
+            white-space: normal;
+          }
+
+          .room-value-span {
+            font-size: 18px;
+          }
+        }
+
+        &.big-icon {
+          .each-tag {
+            display: flex;
+            width: 20%;
+            @include margin_r(5%);
+            @include margin_b(20px);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: auto;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            color: $whiteColor;
+            border: none;
+            @include border_radius(20px);
+            @include box_shadow(0,0,10px,#0ff);
+            cursor: pointer;
+            background: linear-gradient(to bottom,#005f9c,#0089c7, #005d9a);
+
+            &:nth-child(4n) {
+              @include margin_r(0);
+            }
+
+            &:nth-child(4n+1) {
+              @include margin_l(2%);
+            }
+
+            .room-name-span {
+              @include margin_b(40px);
+            }
+
+            .room-value-span {
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+
+    .room-info {
+      display: flex;
+      background: #000f40;
+      width: 100%;
+      @include padding_t(20px);
+      @include border_radius(30px);
+      @include box_shadow(0px,0px,10px,#09e);
+
+      & > div {
+        width: 40%;
+        height: 100%;
+      }
+
+      .room-eqiupment {
+        width: 60%;
+        @include padding_l(40px);
+
+        .iconfont {
+          font-size: 24px;
+          font-weight: normal;
+        }
+
+        .status-off {
+          font-size: 34px;
+        }
+
+        .status-on {
+          font-size: 34px;
+          color: $greenColor;
+        }
+
+        .each-room {
+          display: flex;
+          align-items: center;
+          @include border_radius(10px);
+          background: #0d0d8e;
+          @include margin_b(10px);
+          @include padding_l(10px);
+
+          &:nth-child(even) {
+            background: #1e5c9c;
+          }
+
+          &:last-child {
+            @include margin_b(0);
+          }
+
+          .el-col {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+
+    .project-info {
+      display: flex;
+
+      & > div {
+        width: 40%;
+        height: 100%;
+      }
+
+      & > ul {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        li {
+          flex: 1;
+          text-align: center;
+
+          i {
+            display: block;
+            width: 50px;
+            height: 40px;
+            margin: 0 auto 20px;
+
+            &+p {
+              font-size: 16px;
+
+              &+span {
+                font-size: 14px;
+              }
+            }
+
+            &.number {
+              background: url("../../images/fullScreen/icon_01.png") center no-repeat;
+              background-size: contain;
+            }
+
+            &.area {
+              background: url("../../images/fullScreen/icon_02.png") center no-repeat;
+              background-size: contain;
+            }
+          }
+        }
+      }
+    }
+
+    .project-asset {
+      .title {
+        text-align: center;
+        font-size: 24px;
+        @include margin_b(10px);
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 20%;
+          height: 1px;
+          background: linear-gradient(to right,#071664, #09e);
+          position: absolute;
+          left: 50px;
+          top: 15px;
+        }
+
+        &:after {
+          content: '';
+          width: 20%;
+          height: 1px;
+          background: linear-gradient(to left,#071664, #09e);
+          position: absolute;
+          right: 50px;
+          top: 15px;
+        }
+      }
+
+      .asset-item {
+        text-align: center;
+        font-size: 16px;
+        @include padding_t(5px);
+        @include padding_b(5px);
+      }
+    }
+  }
+
+  .room-video-list-dialog {
+    .el-dialog__header {
+      padding: 0;
+    }
+
+    .el-dialog__body {
+      background: linear-gradient(#0a2460,#61819d);
+    }
+
+    .button-list {
+      text-align: center;
+    }
+  }
+
+  .line-dialog {
+    .el-dialog__header {
+      padding: 0;
+    }
+
+    .el-dialog__body {
+      background: linear-gradient(#0a2460,#61819d);
+
+      .dialog-title {
+        color: $whiteColor;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .button-list {
+        text-align: center;
+      }
+    }
+  }
+
+  .room-video-dialog {
+    .el-dialog__header {
+      padding: 0;
+    }
+
+    .el-dialog__body {
+      background: linear-gradient(#0a2460,#61819d);
+
+      .dialog-title {
+        color: $whiteColor;
+        font-size: 18px;
+        text-align: center;
+      }
+
+      .button-list {
+        text-align: center;
+      }
+    }
+
+    .nav-list {
+      display: flex;
+      justify-content: flex-start;
+      @include margin_b(20px);
+      font-weight: normal;
+
+      & > div {
+        cursor: pointer;
+        line-height: 40px;
+        background: $whiteColor;
+        @include padding_l(10px);
+        @include padding_r(10px);
+        @include border_radius(10px);
+        @include margin_r(10px);
+        color: #246bab;
+        font-size: 16px;
+
+        &.current {
+          color: $whiteColor;
+          background: #246bab;
+        }
+      }
+    }
+
+    .el-checkbox-group {
+      .el-checkbox {
+        display: flex;
+        width: 50%;
+        margin: 0 0 10px;
+        align-items: center;
+
+        .el-checkbox__label {
+          width: 80%;
+          height: 30px;
+          line-height: 30px;
+          color: $whiteColor;
+          @include margin_l(10px);
+          @include padding_l(10px);
+          @include padding_r(10px);
+          @include border_radius(10px);
+          background: $primaryColor;
+        }
+      }
+    }
+
+    .button-list {
+      text-align: center;
+      @include margin_t(30px);
+    }
+  }
+}
+
+.prop-style {
+  background: rgba(255,255,255,0.8);
+
+  .popper__arrow {
+    opacity: 0.8;
+  }
+
+  .el-row {
+    height: 200px;
+    overflow-y: scroll;
+
+    .el-col {
+      @include margin_b(5px);
+
+      &:nth-child(odd) {
+        border-right: 1px dashed #666;
+      }
+    }
+  }
+}
+
+.prop-area-style {
+  @extend .prop-style;
+
+  .el-row {
+    .el-col {
+      display: flex;
+      justify-content: space-between;
+
+      &:nth-child(odd) {
+        border-right: 1px dashed #666;
+      }
+
+      .project-name {
+        width: 60%;
+      }
+
+      .project-value {
+        width: 35%;
+      }
+    }
+  }
+}

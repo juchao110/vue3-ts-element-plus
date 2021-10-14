@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  transition: background-color 0.2s ease-out;
+  -webkit-transition: background-color 0.2s ease-out;
+  -o-transition: background-color 0.2s ease-out;
+  -ms-transition: background-color 0.2s ease-out;
+  -moz-transition: background-color 0.2s ease-out;
+}
+
+a,
+body,
+dd,
+dl,
+dt,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+input,
+li,
+ol,
+p,
+span,
+tbody,
+td,
+thead,
+tr,
+ul {
+  margin: 0;
+  padding: 0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  border: 0;
+}
+
+input {
+  outline: none;
+  background: none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 400px #fff inset;
+  -webkit-text-fill-color: #ccc;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+  color: #ccc;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #ccc;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: #ccc;
+}
+
+body {
+  font-size: 14px;
+  color: #333;
+  background: #fafafa;
+}
+
+body {
+  font-family: "Microsoft YaHei";
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+select {
+  -webkit-appearance: none;
+}
+
+.l {
+  float: left;
+}
+
+.r {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+.clearfloat:after {
+  display: block;
+  clear: both;
+  content: "";
+  visibility: hidden;
+  height: 0;
+}
+
+.clearfloat {
+  zoom: 1;
+}
+
+.clear_select {
+  border: 0;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+}
+// @font-face {
+//   font-family: 'iconfont';
+//   src: url("../font/iconfont.eot");
+//   src: url("../font/iconfont.eot?#iefix") format('embedded-opentype'), url("../font/iconfont.woff") format('woff'), url("../font/iconfont.ttf") format('truetype'), url("../font/iconfont.svg#iconfont") format('svg');
+// }
+@font-face {
+  font-family: 'iconfont';
+  /* Project id 1101195 */
+  src: url("//at.alicdn.com/t/font_1101195_kijssjvvxf.woff2?t=1632302268484") format('woff2'), url("//at.alicdn.com/t/font_1101195_kijssjvvxf.woff?t=1632302268484") format('woff'), url("//at.alicdn.com/t/font_1101195_kijssjvvxf.ttf?t=1632302268484") format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+//reset element message
+
+.el-message {
+  top: 20px !important;
+}
+
+.el-message:not(:last-child) {
+  visibility: hidden;
+}

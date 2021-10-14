@@ -1,0 +1,163 @@
+$primaryColor: #2c6af1;
+$fontColor: #333;
+$orangeColor: #f70;
+$redColor: #f32;
+$borderColor: #e5e5e5;
+$whiteColor: #fff;
+$bgColor: #f8f8f8;
+$yellowColor: #cec823;
+$greenColor: #07c160;
+@mixin padding($val) {
+  padding: $val;
+}
+@mixin padding_a($top, $right, $bottom, $left) {
+  padding: $top $right $bottom $left;
+}
+@mixin padding_t($val) {
+  padding-top: $val;
+}
+@mixin padding_r($val) {
+  padding-right: $val;
+}
+@mixin padding_b($val) {
+  padding-bottom: $val;
+}
+@mixin padding_l($val) {
+  padding-left: $val;
+}
+@mixin margin($val) {
+  margin: $val;
+}
+@mixin margin_a($top, $right, $bottom, $left) {
+  margin: $top $right $bottom $left;
+}
+@mixin margin_t($val) {
+  margin-top: $val;
+}
+@mixin margin_r($val) {
+  margin-right: $val;
+}
+@mixin margin_b($val) {
+  margin-bottom: $val;
+}
+@mixin margin_l($val) {
+  margin-left: $val;
+}
+@mixin border_b($val, $color) {
+  border-bottom: $val solid $color;
+}
+@mixin border_t($val, $color) {
+  border-top: $val solid $color;
+}
+@mixin border_l($val, $color) {
+  border-left: $val solid $color;
+}
+@mixin border_r($val, $color) {
+  border-right: $val solid $color;
+}
+@mixin border_radius($val) {
+  border-radius: $val;
+  -o-border-radius: $val;
+  -moz-border-radius: $val;
+  -ms-border-radius: $val;
+  -webkit-border-radius: $val;
+}
+@mixin animation($name, $time) {
+  animation: $name $time;
+  -webkit-animation: $name $time;
+  -ms-animation: $name $time;
+  -o-animation: $name $time;
+  -moz-animation: $name $time;
+}
+@mixin box-shadow($sval, $cval, $mo, $color) {
+  box-shadow: $sval $cval $mo $color;
+  -webkit-box-shadow: $sval $cval $mo $color;
+  -ms-box-shadow: $sval $cval $mo $color;
+  -o-box-shadow: $sval $cval $mo $color;
+  -moz-box-shadow: $sval $cval $mo $color;
+}
+@mixin transition($val) {
+  transition: $val 0.5s ease-in-out;
+  -webkit-transition: $val 0.5s ease-in-out;
+  -o-transition: $val 0.5s ease-in-out;
+  -ms-transition: $val 0.5s ease-in-out;
+  -moz-transition: $val 0.5s ease-in-out;
+}
+@mixin transform($val) {
+  transform: $val;
+  -webkit-transform: $val;
+  -o-transform: $val;
+  -ms-transform: $val;
+  -moz-transform: $val;
+}
+@mixin bg($val1, $val2) {
+  background: -webkit-linear-gradient(left, $val1, $val2);
+  background: -o-linear-gradient(right, $val1, $val2);
+  background: -moz-linear-gradient(right, $val1, $val2);
+  background: linear-gradient(to right, $val1, $val2);
+}
+
+.mg-r-10 {
+  @include margin_r(10px);
+}
+
+.mg-r-20 {
+  @include margin_r(20px);
+}
+
+.mg-r-30 {
+  @include margin_r(30px);
+}
+
+.mg-r-40 {
+  @include margin_r(40px);
+}
+
+.mg-r-50 {
+  @include margin_r(50px);
+}
+
+.mg-b-10 {
+  @include margin_b(10px);
+}
+
+.mg-b-20 {
+  @include margin_b(20px);
+}
+
+.mg-b-30 {
+  @include margin_b(30px);
+}
+
+.mg-b-40 {
+  @include margin_b(40px);
+}
+
+.mg-b-50 {
+  @include margin_b(50px);
+}
+
+.mg-l-20 {
+  @include margin_l(20px);
+}
+
+.width-100 {
+  width: 100px;
+}
+
+.width-200 {
+  width: 200px;
+}
+
+.width-300 {
+  width: 300px;
+}
+
+.width-400 {
+  width: 400px;
+}
+
+.hover-class {
+  color: $primaryColor;
+  text-decoration: underline;
+}
